@@ -1,17 +1,20 @@
 <?php
-// Cấu hình thông tin kết nối MySQL
-$servername = "localhost:3307";   // máy chủ MySQL (mặc định là localhost)
-$username = "root";          // tài khoản mặc định trong XAMPP
-$password = "";              // để trống (nếu bạn chưa đặt mật khẩu)
-$dbname = "product_db";      // tên database bạn đã tạo trong phpMyAdmin
+require_once __DIR__ . '/vendor/autoload.php';
 
-// Tạo kết nối
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad(); // dùng safeLoad() để không lỗi khi thiếu file .env
+
+// Đọc biến môi trường
+$servername = $_ENV['DB_HOST'];
+$username   = $_ENV['DB_USER'];
+$password   = $_ENV['DB_PASS'];
+$dbname     = $_ENV['DB_NAME'];
+
+// Tạo kết nối MySQL
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Kiểm tra kết nối
+// Kiểm tra
 if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
-} else {
-    // echo "✅ Kết nối thành công!";
 }
 ?>
