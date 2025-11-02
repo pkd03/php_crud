@@ -19,7 +19,7 @@
     </tr>
 
     <?php
-    $sql = "SELECT * FROM products ORDER BY id DESC";
+    $sql = "SELECT * FROM products ORDER BY id ";
     $result = $conn->query($sql);
     while ($row = $result->fetch_assoc()):
     ?>
