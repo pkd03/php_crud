@@ -11,7 +11,6 @@
   <button><a href="create.php">+ Thêm sản phẩm</a></button>
   <table border="2" cellpadding="20">
     <tr>
-      <th>ID</th>
       <th>Tên</th>
       <th>Giá</th>
       <th>Mô tả</th>
@@ -24,7 +23,6 @@
     while ($row = $result->fetch_assoc()):
     ?>
       <tr>
-        <td><?= $row['id'] ?></td>
         <td><?= $row['name'] ?></td>
         <td><?= $row['price'] ?> VNĐ</td>
         <td><?= $row['description'] ?></td>
