@@ -34,6 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Mô tả: <textarea name="description"><?= $product['description'] ?></textarea><br><br>
     <button type="submit">Cập nhật</button>
   </form>
-  <a href="index.php">← Quay lại</a>
+  <button><a href="index.php">← Quay lại</a></button>
 </body>
 </html>

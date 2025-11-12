@@ -8,7 +8,7 @@
 </head>
 <body>
   <h2>Danh sách sản phẩm</h2>
-  <a href="create.php">+ Thêm sản phẩm</a>
+  <button><a href="create.php">+ Thêm sản phẩm</a></button>
   <table border="1" cellpadding="8">
     <tr>
       <th>ID</th>
@@ -29,12 +29,11 @@
         <td><?= $row['price'] ?></td>
         <td><?= $row['description'] ?></td>
         <td>
-          <a href="update.php?id=<?= $row['id'] ?>">Sửa</a> |
-          <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Xóa sản phẩm này?');">Xóa</a>
+          <button><a href="update.php?id=<?= $row['id'] ?>">Sửa</a></button> |
+          <button><a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Xóa sản phẩm này?');">Xóa</a></button>
         </td>
       </tr>
     <?php endwhile; ?>
   </table>
-  <h1>test</h1>
 </body>
 </html>
