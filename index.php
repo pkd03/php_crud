@@ -9,7 +9,7 @@
 <body>
   <h2>Danh sách sản phẩm</h2>
   <button><a href="create.php">+ Thêm sản phẩm</a></button>
-  <table border="1" cellpadding="8">
+  <table border="2" cellpadding="20">
     <tr>
       <th>ID</th>
       <th>Tên</th>
@@ -26,7 +26,7 @@
       <tr>
         <td><?= $row['id'] ?></td>
         <td><?= $row['name'] ?></td>
-        <td><?= $row['price'] ?></td>
+        <td><?= $row['price'] ?> VNĐ</td>
         <td><?= $row['description'] ?></td>
         <td>
           <button><a href="update.php?id=<?= $row['id'] ?>">Sửa</a></button> |

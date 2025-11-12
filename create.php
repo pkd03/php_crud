@@ -26,10 +26,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <h2>Thêm sản phẩm</h2>
   <form method="post">
     Tên: <input type="text" name="name" required><br><br>
-    Giá: <input type="number" step="0.01" name="price" required><br><br>
+    Giá: <input type="number" step="1000" name="price" required><br><br>
     Mô tả: <textarea name="description"></textarea><br><br>
     <button type="submit">Lưu</button>
   </form>
-  <a href="index.php">← Quay lại</a>
+  <button><a href="index.php">← Quay lại</a></button>
 </body>
 </html>
